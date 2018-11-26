@@ -1,7 +1,6 @@
 package br.com.metodologia.models;
 
 import java.io.Serializable;
-import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,8 +8,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
 
 @Entity
 @Table(name="tb_aluno")
@@ -29,8 +26,7 @@ public class Aluno implements Serializable {
 	private String sobrenome;
 
 	@Column(nullable=false)
-	@Temporal(TemporalType.DATE)
-	private Date dataDeNascimento;
+	private String dataDeNascimento;
 	
 	@Column(nullable=false)
 	private int serie;
@@ -51,11 +47,11 @@ public class Aluno implements Serializable {
 		this.sobrenome = sobrenome;
 	}
 
-	public Date getDataDeNascimento() {
+	public String getDataDeNascimento() {
 		return dataDeNascimento;
 	}
 
-	public void setDataDeNascimento(Date dataDeNascimento) {
+	public void setDataDeNascimento(String dataDeNascimento) {
 		this.dataDeNascimento = dataDeNascimento;
 	}
 

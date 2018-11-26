@@ -7,12 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
     <title>Cadastro</title>
 </head>
 
 <body>
     <nav class="navbar navbar-light bg-light">
         <span class="navbar-brand mb-0 h1">Escola</span>
+        <a href="/aluno"><button class="btn btn-dark">Alunos</button></a>
     </nav>
 
     <div class="container">
@@ -58,7 +60,7 @@
         <hr>
         <br>
 
-        <div class="h3">Pesquisar Professores</div>
+        <!-- <div class="h3">Pesquisar Professores</div>
         <br>
         <div class="input-group mb-3">
             <input type="text" class="form-control" placeholder="Digite o nome do Professor ou Disciplina" aria-label="Recipient's username"
@@ -66,7 +68,7 @@
             <div class="input-group-append">
                 <button class="btn btn-outline-secondary" type="button" id="button-addon2">Pesquisar</button>
             </div>
-        </div>
+        </div>  -->
         <br>
         <table class="table table-striped">
             <thead>
@@ -74,6 +76,7 @@
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Disciplina</th>
+                    <th>Remover</th>
                 </tr>
             </thead>
             <tbody>
@@ -81,6 +84,7 @@
                     <td><span th:text="${professor.id}"></span></td>
                     <td><span th:text="${professor.nome}"></span></td>
                     <td><span th:text="${professor.disciplina}"></span></td>
+                    <td><a th:href="${(#mvc.url('PC#deletarProfessor').arg(0,professor.id)).build()}"><i class="far fa-trash-alt"></i></a></td>
                 </tr>
             </tbody>
         </table>

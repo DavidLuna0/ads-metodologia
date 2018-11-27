@@ -22,4 +22,18 @@ public class Turma implements Serializable {
 	
 	@OneToMany
 	private List<Aluno> alunos;
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public long getCodigo() {
+		return codigo;
+	}
+	
+	
 }

@@ -4,27 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Page Title</title>
+    <title>Sistema escolar</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="all.css">
 </head>
 <body>
-    <table class="">
-        <thead>
-            <tr>
-                <th>Id</th>
-                <th>Nome</th>
-                <th>Série</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr th:each="aluno : ${alunos}">
-                <td><span th:text="${aluno.id}"></span></td>
-                <td><span th:text="${aluno.nome}"></span></td>
-                <td><span th:text="${aluno.serie}"></span></td>
-            </tr>
-        </tbody>
-    </table>
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Escola</span>
+    </nav>
+
+    <div class="container">
+        <div class="h3">Seja bem vindo ao cadastro de alunos</div>
+        <hr>
+        <div class="h3">Para autenticar no sistema clique no botão abaixo.</div>
+        <br/>
+        <a href="/aluno"><button class="btn btn-dark">Fazer login</button></a>
+    </div>
 </body>
 </html>
